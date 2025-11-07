@@ -1,0 +1,26 @@
+/* src/styles/base/_variables.scss */
+
+/* ================================================
+   SCSS 계산용 변수
+   ================================================ */
+/* BREAKPOINTS */
+$breakpoint-desktop: 1920px;
+$breakpoint-laptop: 1560px;
+$breakpoint-tablet: 1200px;
+$breakpoint-mobile: 860px;
+
+/* vw 기준 너비 */
+$base-vw-desktop: 1920;
+$base-vw-laptop: 1560;
+$base-vw-tablet: 1200;
+$base-vw-mobile: 860;
+
+/* FONT */
+$Pretendard: 'Pretendard', sans-serif;
+$font-size-base: 16px;
+$base-font-size: 16;
+
+/* 기본 색상 */
+$white: #ffffff;
+$black: #000000;
+$text-color: #333;

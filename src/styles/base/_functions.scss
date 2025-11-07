@@ -1,0 +1,26 @@
+// 단위를 제거하고 숫자만 반환
+@function strip-unit($value) {
+  @if type-of($value) == 'number' and not unitless($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  @return $value;
+}
+
+// vw 변환 함수
+// $base-vw-desktop: 1920;
+// laptop에서 1920으로 계산
+@function laptopVW($px) {
+  @return calc(strip-unit($px) / $base-vw-laptop * 100vw);
+}
+
+@function laptopVH($px) {
+  @return calc(strip-unit($px) / $base-vw-laptop * 100vh);
+}
+
+@function tabletVW($px) {
+  @return calc(strip-unit($px) / $base-vw-tablet * 100vw);
+}
+
+@function mobileVW($px) {
+  @return calc((strip-unit($px) / $base-vw-mobile * 100vw)*2);
+}
