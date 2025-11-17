@@ -9,9 +9,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = params;
   const isKorean = locale === 'ko';
 
-  // ----------------------------------------
-  // 기본 정보
-  // ----------------------------------------
   const title = isKorean
     ? '포트폴리오 | 프론트엔드 공유경'
     : 'Portfolio | Frontend Developer Gong Yugyeong';
@@ -27,9 +24,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const ogImage = `${siteUrl}/images/og-thumbnail.jpg`;
 
-  // ----------------------------------------
-  // 메타데이터 리턴
-  // ----------------------------------------
   return {
     title,
     description,
@@ -65,6 +59,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function LocaleServerLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+export default function LocaleServerLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
 }

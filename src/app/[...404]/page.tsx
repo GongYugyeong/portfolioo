@@ -1,19 +1,16 @@
 // src/app/[...404]/page.tsx
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import NotFound from "@/app/[locale]/not-found";
-import { useParams } from "next/navigation";
-import i18n from "@/i18n"; // i18n 인스턴스 import
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
-export default function NotFoundCatchAll() {
-  const params = useParams();
-  const locale = Array.isArray(params["404"]) ? params["404"][0] : "ko";
+export default function CatchAll404() {
+  const router = useRouter();
 
-  // locale이 바뀔 때마다 i18n 언어도 변경
   useEffect(() => {
-    i18n.changeLanguage(locale);
-  }, [locale]);
+    const lang = navigator.language.startsWith('en') ? 'en' : 'ko';
+    router.replace(`/${lang}/not-found`);
+  }, [router]);
 
-  return <NotFound locale={locale} />;
+  return null;
 }

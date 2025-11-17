@@ -1,30 +1,29 @@
 // src/app/[locale]/not-found.tsx
 'use client';
 
-import { useTranslation } from "react-i18next";
-import Link from "next/link";
+import i18n from "@/i18n";
 
-import styles from '@/styles/common/Components.module.scss';
-
-type Props = {
-  locale: string;
-};
-
-export default function NotFoundPage({ locale }: Props) {
-  const { t } = useTranslation();
+export default function LocaleNotFoundPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const locale = params.locale;
+  i18n.changeLanguage(locale);
 
   return (
-    <main className={styles.notFound}>
-      <img src="/images/common/icon_notFound.svg" alt="notFound" />
-      <div className={styles.box}>
-        <h2>페이지를 찾을 수 없습니다</h2>
-        <p>
-          주소를 잘못 입력하였거나, 변경 혹은 삭제되었을 수 있습니다.<br />
-          올바른 주소를 입력했는지 다시 한번 확인해 주세요.
-        </p>
-      </div>
-      <Link href={'/'}>메인으로</Link>
-      <p>{t('LangOption')}: {locale} {locale.toUpperCase()}</p>
-    </main>
+    <div style={{ padding: "60px", textAlign: "center" }}>
+      {locale === "ko" ? (
+        <>
+          <h1>페이지를 찾을 수 없습니다.</h1>
+          <p>요청하신 페이지가 존재하지 않습니다.</p>
+        </>
+      ) : (
+        <>
+          <h1>Page Not Found</h1>
+          <p>The page you requested does not exist.</p>
+        </>
+      )}
+    </div>
   );
 }

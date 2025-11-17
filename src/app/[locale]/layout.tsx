@@ -3,25 +3,17 @@ import { ReactNode } from 'react';
 import { I18nProvider } from '@/components/I18nProvider';
 
 export function generateStaticParams() {
-  return [
-    { locale: 'ko' },
-    { locale: 'en' },
-  ];
+  return [{ locale: 'ko' }, { locale: 'en' }];
 }
 
-interface Props {
+export default function LocaleLayout({
+  children,
+  params,
+}: {
   children: ReactNode;
-  params: {
-    locale?: string;
-  };
-}
+  params: { locale: string };
+}) {
+  const locale = params.locale ?? 'ko';
 
-export default function LocaleLayout({ children, params }: Props) {
-  const locale = params?.locale ?? 'ko';
-
-  return (
-    <I18nProvider locale={locale}>
-      {children}
-    </I18nProvider>
-  );
+  return <I18nProvider locale={locale}>{children}</I18nProvider>;
 }
