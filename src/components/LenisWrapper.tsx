@@ -73,7 +73,7 @@ export default function LenisWrapper() {
     };
   }, []);
 
-  // ✅ 라우트가 바뀔 때마다 스크롤을 맨 위로 이동
+  // 라우트가 바뀔 때마다 스크롤을 맨 위로 이동
   useEffect(() => {
     if (lenisRef.current) {
       lenisRef.current.scrollTo(0, { immediate: true });

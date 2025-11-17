@@ -7,10 +7,6 @@ import styled from 'styled-components';
 
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';
-import Section1 from './Section1';
-import Section2 from './Section2';
-import Section3 from './Section3';
-import Section4 from './Section4';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -19,7 +15,7 @@ const Wrapper = styled.div`
   background-color: #fff;
 `;
 
-export default function MainComponent() {
+export default function AboutComponent() {
   const { t } = useTranslation();
   const headerRef = useRef<HTMLElement | null>(null);
 
@@ -29,10 +25,10 @@ export default function MainComponent() {
       <Header ref={headerRef} />
 
       <Wrapper>
-        <Section1 headerRef={headerRef} />
+        {/* <Section1 headerRef={headerRef} />
         <Section2 />
         <Section3 />
-        <Section4 />
+        <Section4 /> */}
       </Wrapper>
 
       <Footer />

@@ -16,7 +16,7 @@
 }
 
 // 레이아웃 스타일 믹스인
-@mixin flexbox($flex: flex,$direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+@mixin flexbox($flex: flex,$direction: row, $justify: flex-start, $align: center, $wrap: nowrap) {
   display: $flex;
   flex-direction: $direction;
   justify-content: $justify;

@@ -20,6 +20,7 @@ body {
   opacity: 0;
   animation: fadeIn 0.3s forwards;
   scroll-behavior: auto !important;
+  overflow-x: hidden;
 }
 
 img, picture, video, canvas, svg {

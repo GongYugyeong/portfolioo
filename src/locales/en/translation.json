@@ -1,9 +1,9 @@
 {
   "LangOption": "EN",
-  "Name": "공유경",
-  "SiteName": "포트폴리오",
-  "404": "404 - 페이지를 찾을 수 없습니다",
+  "Name": "Gong YuGyeong",
+  "SiteName": "Portfolio",
+  "404": "404 - Not Found",
   "common": {
-    "home": "홈"
+    "home": "home"
   }
 }

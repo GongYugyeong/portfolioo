@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import styles from '@/styles/layout/components/Breadcrumb.module.scss';
+import styles from '@/styles/common/Breadcrumb.module.scss';
 
 interface BreadcrumbItem {
   name: string;

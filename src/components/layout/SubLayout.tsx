@@ -7,7 +7,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Breadcrumb from '@/components/common/Breadcrumb';
 
-import styles from '@/styles/layout/components/Components.module.scss';
+import styles from '@/styles/common/Components.module.scss';
 
 interface Props {
   children: ReactNode;
@@ -37,12 +37,12 @@ export default function SubLayout({ children }: Props) {
   ];
 
   return (
-    <div className={styles.sub}>
+    <div className={styles.wrapper}>
       <Header />
 
-      <div className={styles.subWrap}>
+      <div className={styles.wrap}>
         <Breadcrumb items={locationItems} />
-        <div className={styles.subContent}>{children}</div>
+        <div className={styles.container}>{children}</div>
       </div>
 
       <Footer />

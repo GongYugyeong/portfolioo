@@ -1,0 +1,17 @@
+@import '../base/index';
+
+.header {
+  @include flexbox(flex, row, space-between, center);
+  width: 100%;
+
+  h1 {
+    letter-spacing: -7px;
+  }
+
+  nav {
+    ul {
+      @include flexbox(flex, row, center, center);
+      gap: 20px;
+    }
+  }
+}

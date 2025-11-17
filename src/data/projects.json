@@ -1,0 +1,102 @@
+[
+  {
+    "id": 12,
+    "img": "/images/project1.jpg",
+    "title": "아리수",
+    "desc": 
+        "[HTML,CSS,Javascript,Ajax,Fetch]<br />아리수 대행시스템 리뉴얼<br />아리수 고객사이버 사용자/관리자 리뉴얼<br />아리수 PDA 리뉴얼",
+    "link": "",
+    "award": ""
+  },
+  {
+    "id": 11,
+    "img": "/images/project2.jpg",
+    "title": "대웅제약",
+    "desc": "[Next.js,i18n,Zustand,Chart.js,GSAP]<br />대웅제약 리뉴얼",
+    "link": "",
+    "award": ""
+  },
+  {
+    "id": 10,
+    "img": "/images/project3.jpg",
+    "title": "대웅바이오",
+    "desc": "[Next.js,i18n,Zustand,GSAP]<br />대웅바이오 리뉴얼",
+    "link": "",
+    "award": ""
+  },
+  {
+    "id": 9,
+    "img": "/images/project4.jpg",
+    "title": "LG D&O 인프라 시스템",
+    "desc": "[Next.js,Fetch]<br />인프라 시스템 사용자/관리자 구축",
+    "link": "",
+    "award": ""
+  },
+  {
+    "id": 8,
+    "img": "/images/project4.jpg",
+    "title": "인천계양산업단지",
+    "desc": "[Unity,WebGL,HTML,CSS,Javascript,Ajax]<br />인천계양산업단지 분양사이트 구축",
+    "link": "https://kicoxbunyang.co.kr/",
+    "award": ""
+  },
+  {
+    "id": 7,
+    "img": "/images/project6.jpg",
+    "title": "굿웨어몰",
+    "desc": "[HTML,CSS,Javascript,Ajax,GSAP]<br />웹사이트 유지운영 및 신규구축/부분리뉴얼",
+    "link": "https://www.goodwearmall.com/main",
+    "award": ""
+  },
+  {
+    "id": 6,
+    "img": "/images/project5.jpg",
+    "title": "메디게이트",
+    "desc": "[React,HTML,CSS,Javascript,Ajax]<br />웹사이트 유지운영 및 신규구축/부분리뉴얼",
+    "link": "https://www.medigate.net/",
+    "award": ""
+  },
+  {
+    "id": 5,
+    "img": "/images/project5.jpg",
+    "title": "메디게이트 개원입지",
+    "desc": "[React,HTML,CSS,Javascript,Ajax]<br />웹사이트 유지운영",
+    "link": "https://location.medigate.net/ranking?utm_source=medigate&utm_medium=gnb&utm_campaign=ipji",
+    "award": ""
+  },
+  {
+    "id": 4,
+    "img": "/images/mainWorkImg1.png",
+    "title": "Korean Air Aerospace",
+    "desc": "[React,Redux toolkit]<br />대한항공 항공우주사업본부(부분리뉴얼)",
+    "link": "https://aerospace.koreanair.com/main",
+    "award": ""
+  },
+  {
+    "id": 3,
+    "img": "mainWorkImg2.png",
+    "title": "SAMSUNG DISPLAY NEWSROOM",
+    "desc": "[HTML,CSS,Javascript,Ajax]<br />SAMSUNG DISPLAY NEWSROOM(전체리뉴얼)",
+    "link": "https://news.samsungdisplay.com/",
+    "award": ""
+  },
+  {
+    "id": 2,
+    "img": "mainWorkImg3.png",
+    "title": "COLEO MARKETING GRUOP",
+    "desc": "[GSAP,HTML,CSS,Javascript]<br />COLEO MARKETING GROUP(구축)",
+    "link": "http://www.coleomarketing.com/",
+    "award": [
+      { "icon": "web_award_icon01.png" },
+      { "icon": "web_award_icon02.png" }
+    ]
+  },
+  {
+    "id": 1,
+    "img": "mainWorkImg4.png",
+    "title": "LG R1 Compressor<sup>TM</sup>",
+    "desc": "[GSAP,HTML,CSS,Javascript]<br />LG R1 Compressor<sup>TM</sup>(구축)<br />LG Cen3 Scroll Compressor(구축)",
+    "link": "https://compressor-showroom.lg.com/compressor-scroll-R1/",
+    "award": [{ "icon": "web_award_icon02.png" }]
+  }
+]
