@@ -1,10 +1,5 @@
-// src/app/layout.tsx
 import { ReactNode, Suspense } from 'react';
-import Script from 'next/script';
-
-import LenisWrapper from '@/components/LenisWrapper';
-import StyledComponentsRegistry from '@/lib/styledComponents';
-
+import { Providers } from '@/app/providers';
 import '@/styles/globals.scss';
 
 export const metadata = {
@@ -15,10 +10,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <body>
-        <StyledComponentsRegistry>
-          <LenisWrapper />
-          <Suspense>{children}</Suspense>
-        </StyledComponentsRegistry>
+        <Providers>
+          <Suspense>
+            {children}
+          </Suspense>
+        </Providers>
       </body>
     </html>
   );
