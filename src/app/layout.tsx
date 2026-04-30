@@ -8,14 +8,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html>
-      <body>
-        <Providers>
-          <Suspense>
-            {children}
-          </Suspense>
-        </Providers>
-      </body>
-    </html>
+    <Providers>
+      <Suspense fallback={<div />}>
+        {children}
+      </Suspense>
+    </Providers>
   );
 }
