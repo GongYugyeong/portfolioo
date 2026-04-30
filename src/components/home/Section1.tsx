@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import secStyle from '@/styles/layout/Home.module.scss';
+import { withBasePath } from '@/lib/path';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -98,7 +99,7 @@ export default function Section1({ headerRef }: { headerRef: React.RefObject<HTM
 
       <div ref={overlayRef} className={secStyle.overlay}>
         <video playsInline autoPlay loop muted className={secStyle.video}>
-          <source src="/videos/main.mp4" type="video/mp4" />
+          <source src={withBasePath('/videos/main.mp4')} type="video/mp4" />
         </video>
       </div>
     </Section>
