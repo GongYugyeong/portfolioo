@@ -1,7 +1,14 @@
 // next.config.ts
 import type { NextConfig } from 'next';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
+  output: 'export',
+  basePath: isProd ? '/yugyeong' : '',
+  assetPrefix: isProd ? '/yugyeong/' : '',
+  trailingSlash: true,
+  images: { unoptimized: true },
   reactCompiler: true,
   compiler: {
     styledComponents: true,

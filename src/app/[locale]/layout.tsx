@@ -8,10 +8,10 @@ export function generateStaticParams() {
 }
 
 // SEO 통합
-export function generateMetadata(
-  { params }: { params: { locale: string } }
-): Metadata {
-  const { locale } = params;
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
   const isKorean = locale === 'ko';
 
   const title = isKorean
@@ -36,18 +36,21 @@ export function generateMetadata(
   };
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params.locale ?? 'ko';
-
+  const { locale } = await params;
   return (
-    <I18nProvider locale={locale}>
-      {children}
-    </I18nProvider>
+    <html lang={locale}>
+      <body>
+        <I18nProvider locale={locale}>
+          {children}
+        </I18nProvider>
+      </body>
+    </html>
   );
 }
