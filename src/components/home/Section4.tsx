@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import styled from 'styled-components';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -52,6 +54,9 @@ const Section = styled.section`
 `;
 
 export default function Section4() {
+  const params = useParams<{ locale?: string }>();
+  const locale = params?.locale ?? 'ko';
+
   const sectionRef = useRef<HTMLElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const paraRef = useRef<HTMLParagraphElement | null>(null);
@@ -123,7 +128,7 @@ export default function Section4() {
       </div>
 
       <div className="btnWrap">
-        <a ref={buttonRef} href="/contact">Contact Me</a>
+        <Link ref={buttonRef} href={`/${locale}/contact`}>Contact Me</Link>
       </div>
     </Section>
   );

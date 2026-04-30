@@ -4,11 +4,12 @@ import qs from 'qs';
 // 환경별 API URL 설정 함수
 const getApiConfig = () => {
   const isProduction = process.env.NODE_ENV === 'production';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
   return {
     apiURL: process.env.NEXT_PUBLIC_API_URL,
     baseURL: isProduction
-      ? '/api' // 운영환경 → nginx 프록시 경유
+      ? `${basePath}/api` // 운영환경 (정적 export 시 basePath prefix 필요)
       : process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000/api', // 개발환경
   };
 };
