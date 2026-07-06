@@ -28,6 +28,9 @@ export default function SiteFooter({
           <a href={site.github} target="_blank" rel="noreferrer">
             GitHub
           </a>
+          <a href={site.resume} target="_blank" rel="noreferrer">
+            {dict.contact.resumeLabel}
+          </a>
           <span>{dict.contact.location}</span>
           <span className={s.copy}>© 2026 Gong Yugyeong</span>
         </div>

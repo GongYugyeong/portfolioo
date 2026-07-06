@@ -68,7 +68,7 @@
       "AI-assisted development with Claude Code"
     ],
     "educationTitle": "Education",
-    "education": ["Software Engineering (school TBD)", "Computer Engineering (credit-bank program)"],
+    "education": ["Seoil University, Software Engineering", "Computer Engineering (credit-bank program)"],
     "certTitle": "Certificates · Etc.",
     "certs": ["Computer Proficiency Level 2", "Information Equipment Operation Technician", "Class 2 Driver's License"]
   },
@@ -85,6 +85,7 @@
     "lead": "I welcome new projects and collaboration.",
     "emailLabel": "Email",
     "githubLabel": "GitHub",
+    "resumeLabel": "Resume",
     "locationLabel": "Location",
     "location": "Mapo-gu, Seoul",
     "note": "This portfolio is organized around each project's problem-solving process and outcomes."

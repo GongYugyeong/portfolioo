@@ -66,6 +66,18 @@ export default async function ContactPage({
               </a>
             </div>
             <div className={s.row} data-reveal>
+              <span className={s.label}>{dict.contact.resumeLabel}</span>
+              <a
+                className={`${s.value} ${s.valueLink}`}
+                href={site.resume}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="hover"
+              >
+                Notion ↗
+              </a>
+            </div>
+            <div className={s.row} data-reveal>
               <span className={s.label}>{dict.contact.locationLabel}</span>
               <span className={s.value}>{dict.contact.location}</span>
             </div>
