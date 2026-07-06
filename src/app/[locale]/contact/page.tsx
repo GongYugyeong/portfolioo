@@ -1,99 +1,90 @@
-'use client';
+import type { Metadata } from 'next';
 
-import SubLayout from '@/components/layout/SubLayout';
+import { getDictionary, isLocale, defaultLocale, type Locale } from '@/lib/dictionary';
+import { pageMetadata } from '@/lib/metadata';
+import { site } from '@/data/site';
+import MagneticButton from '@/components/common/MagneticButton';
+import s from '@/styles/sections/contact.module.scss';
 
-import styled from 'styled-components';
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = getDictionary(locale);
+  return pageMetadata({
+    locale,
+    path: '/contact',
+    title: dict.meta.contact.title,
+    description: dict.meta.contact.description,
+  });
+}
 
-const ContactWrap = styled.div`
-  width: 100%;
-  padding: 160px 5vw;
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const loc: Locale = isLocale(locale) ? locale : defaultLocale;
+  const dict = getDictionary(loc);
 
-  .title {
-    text-align: center;
-    margin-bottom: 60px;
-
-    h2 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #111;
-    }
-
-    p {
-      color: #555;
-      margin-top: 10px;
-    }
-  }
-
-  .contactBox {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fafafa;
-    border-radius: 16px;
-    padding: 40px 30px;
-    box-shadow: 0 5px 16px rgba(0,0,0,0.06);
-
-    label {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #222;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      padding: 14px 16px;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      font-size: 1rem;
-
-      &:focus {
-        border-color: #111;
-      }
-    }
-
-    button {
-      width: 100%;
-      padding: 14px 0;
-      background: #111;
-      color: #fff;
-      border-radius: 999px;
-      border: none;
-      font-size: 1rem;
-      transition: 0.3s;
-
-      &:hover {
-        background: #333;
-      }
-    }
-  }
-`;
-
-export default function ContactPage() {
   return (
-    <SubLayout>
-      <ContactWrap>
-        <div className="title">
-          <h2>Contact Me</h2>
-          <p>아래 양식을 작성하여 문의를 보내주세요.</p>
+    <>
+      <section className={s.section}>
+        <div className={s.wrap}>
+          <span className={s.kicker}>(01) — {dict.contact.title}</span>
+          <h1 className={s.headline} data-reveal>
+            {dict.contact.title}
+          </h1>
+          <p className={s.lead} data-reveal>
+            {dict.contact.lead}
+          </p>
+
+          <div className={s.list}>
+            <div className={s.row} data-reveal>
+              <span className={s.label}>{dict.contact.emailLabel}</span>
+              <a
+                className={`${s.value} ${s.valueLink}`}
+                href={`mailto:${site.email}`}
+                data-cursor="hover"
+              >
+                {site.email}
+              </a>
+            </div>
+            <div className={s.row} data-reveal>
+              <span className={s.label}>{dict.contact.githubLabel}</span>
+              <a
+                className={`${s.value} ${s.valueLink}`}
+                href={site.github}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="hover"
+              >
+                {site.github} ↗
+              </a>
+            </div>
+            <div className={s.row} data-reveal>
+              <span className={s.label}>{dict.contact.locationLabel}</span>
+              <span className={s.value}>{dict.contact.location}</span>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="contactBox">
-          <form>
-            <label>이름</label>
-            <input type="text" placeholder="Your Name" />
-
-            <label>이메일</label>
-            <input type="email" placeholder="Your Email" />
-
-            <label>문의 내용</label>
-            <textarea rows={5} placeholder="Your Message"></textarea>
-
-            <button type="submit">Send</button>
-          </form>
+      <section className={s.ctaSection}>
+        <div className={s.wrap}>
+          <div data-reveal>
+            <MagneticButton href={`mailto:${site.email}`} variant="solid">
+              {dict.contact.emailLabel}
+            </MagneticButton>
+          </div>
+          <p className={s.note} data-reveal>
+            {dict.contact.note}
+          </p>
         </div>
-      </ContactWrap>
-    </SubLayout>
+      </section>
+    </>
   );
 }

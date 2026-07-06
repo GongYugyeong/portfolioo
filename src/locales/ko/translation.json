@@ -1,9 +1,99 @@
 {
   "LangOption": "KR",
   "Name": "공유경",
-  "SiteName": "포트폴리오",
-  "404": "404 - 페이지를 찾을 수 없습니다",
+  "SiteName": "공유경 · 프론트엔드 포트폴리오",
+  "404": "페이지를 찾을 수 없습니다",
+  "nav": {
+    "home": "홈",
+    "about": "소개",
+    "projects": "프로젝트",
+    "contact": "연락처",
+    "switchLang": "EN"
+  },
+  "meta": {
+    "home": {
+      "title": "공유경 · 프론트엔드 개발자",
+      "description": "퍼블리셔에서 시작해 React·Next.js 기반 서비스를 만드는 프론트엔드 개발자 공유경의 포트폴리오. 웹 접근성·SEO·AI 기반 개발."
+    },
+    "about": {
+      "title": "소개",
+      "description": "5년+ 경력의 프론트엔드 개발자 공유경 — 경력, 기술 스택, 핵심 역량 소개."
+    },
+    "projects": {
+      "title": "프로젝트",
+      "description": "Next.js 리뉴얼, 배리어프리 관광 키오스크, 관리자 시스템 등 공유경이 참여한 대표 프로젝트."
+    },
+    "contact": {
+      "title": "연락처",
+      "description": "프론트엔드 개발자 공유경에게 연락하기 — 이메일·GitHub."
+    }
+  },
+  "hero": {
+    "eyebrow": "Portfolio / 2026",
+    "role": "Publisher · Frontend Developer",
+    "tagline": "퍼블리셔의 시선으로 마크업의 품질을 챙기고, 프론트엔드 엔지니어로 사용자 경험을 설계합니다.",
+    "cta": "프로젝트 보기",
+    "ctaContact": "연락하기",
+    "scroll": "Scroll",
+    "status": "새로운 기회에 열려 있어요",
+    "location": "서울, KR"
+  },
+  "home": {
+    "aboutTitle": "소개",
+    "aboutLead": "프론트엔드 개발은 화면을 구현하는 일이 아니라 사용자와 서비스를 연결하는 일이라고 생각합니다.",
+    "aboutMore": "더 알아보기",
+    "projectsTitle": "대표 프로젝트",
+    "projectsLead": "문제 해결 과정과 성과 중심으로 골랐습니다.",
+    "projectsMore": "전체 프로젝트 보기",
+    "contactTitle": "함께 일해요",
+    "contactLead": "새로운 프로젝트나 협업 제안을 환영합니다.",
+    "contactCta": "연락하기"
+  },
+  "about": {
+    "title": "소개",
+    "lead": "퍼블리셔에서 프론트엔드 개발자로.",
+    "intro": [
+      "프론트엔드 개발자는 단순히 화면을 구현하는 사람이 아니라, 사용자와 서비스를 연결하는 역할이라고 생각합니다.",
+      "퍼블리셔로 커리어를 시작해 지금은 React·Next.js 기반 프론트엔드 개발자로 다양한 구축·리뉴얼 프로젝트를 수행하고 있습니다.",
+      "최근에는 웹 접근성(WA), SEO, 성능 최적화, Docker·Jenkins 기반 개발/배포 환경, Claude Code와 AI Agent를 활용한 개발 워크플로까지 적극적으로 다루며 서비스 품질과 개발 생산성을 함께 고민합니다."
+    ],
+    "experienceTitle": "경력",
+    "stackTitle": "기술 스택",
+    "highlightsTitle": "핵심 역량",
+    "highlights": [
+      "React·Next.js 기반 구축 및 리뉴얼 프로젝트 다수 수행",
+      "웹 접근성(WA) 프로젝트 경험",
+      "SEO 개선 프로젝트 수행",
+      "Jenkins 기반 CI/CD 운영 · Docker 개발환경 구축",
+      "Claude Code를 활용한 AI 기반 개발"
+    ],
+    "educationTitle": "학력",
+    "education": ["소프트웨어공학 (학교명 확인 필요)", "학점은행제 컴퓨터공학"],
+    "certTitle": "자격 · 기타",
+    "certs": ["컴퓨터활용능력 2급", "정보기기운용기능사", "2종 보통 운전면허"]
+  },
+  "projects": {
+    "title": "프로젝트",
+    "lead": "문제 해결 과정과 성과 중심으로 정리했습니다.",
+    "featuredTitle": "대표 프로젝트",
+    "moreTitle": "그 외 작업",
+    "roleLabel": "역할",
+    "visit": "사이트 방문"
+  },
+  "contact": {
+    "title": "연락처",
+    "lead": "새로운 프로젝트나 협업 제안을 환영합니다.",
+    "emailLabel": "이메일",
+    "githubLabel": "GitHub",
+    "locationLabel": "지역",
+    "location": "서울특별시 마포구",
+    "note": "포트폴리오는 프로젝트별 문제 해결 과정과 성과 중심으로 구성했습니다."
+  },
   "common": {
-    "home": "홈"
+    "home": "홈",
+    "backHome": "홈으로",
+    "current": "재직 중",
+    "notFound": "페이지를 찾을 수 없습니다",
+    "goHome": "홈으로 돌아가기"
   }
 }

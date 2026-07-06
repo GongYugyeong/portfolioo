@@ -1,9 +1,99 @@
 {
   "LangOption": "EN",
-  "Name": "Gong YuGyeong",
-  "SiteName": "Portfolio",
-  "404": "404 - Not Found",
+  "Name": "Gong Yugyeong",
+  "SiteName": "Gong Yugyeong · Frontend Portfolio",
+  "404": "Page not found",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "switchLang": "KR"
+  },
+  "meta": {
+    "home": {
+      "title": "Gong Yugyeong · Frontend Developer",
+      "description": "Portfolio of Gong Yugyeong — a frontend developer who started as a publisher and builds React·Next.js services with a focus on accessibility, SEO, and AI-assisted development."
+    },
+    "about": {
+      "title": "About",
+      "description": "Gong Yugyeong, a frontend developer with 5+ years — career, tech stack, and core strengths."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Selected projects by Gong Yugyeong — Next.js renewals, a barrier-free tourism kiosk, admin systems, and more."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with frontend developer Gong Yugyeong — email and GitHub."
+    }
+  },
+  "hero": {
+    "eyebrow": "Portfolio / 2026",
+    "role": "Publisher · Frontend Developer",
+    "tagline": "I keep markup quality sharp with a publisher's eye, and design user experiences as a frontend engineer.",
+    "cta": "View Projects",
+    "ctaContact": "Get in touch",
+    "scroll": "Scroll",
+    "status": "Open to new opportunities",
+    "location": "Seoul, KR"
+  },
+  "home": {
+    "aboutTitle": "About",
+    "aboutLead": "I see frontend work not as building screens, but as connecting users with services.",
+    "aboutMore": "Learn more",
+    "projectsTitle": "Selected Projects",
+    "projectsLead": "Chosen for their problem-solving and outcomes.",
+    "projectsMore": "View all projects",
+    "contactTitle": "Let's work together",
+    "contactLead": "I welcome new projects and collaboration.",
+    "contactCta": "Get in touch"
+  },
+  "about": {
+    "title": "About",
+    "lead": "From publisher to frontend developer.",
+    "intro": [
+      "A frontend developer isn't just someone who builds screens — I see the role as connecting users with services.",
+      "I started my career as a publisher and now work as a React·Next.js frontend developer across many builds and renewals.",
+      "Lately I actively work with web accessibility (WA), SEO, performance, Docker·Jenkins pipelines, and AI-assisted workflows using Claude Code and AI agents — balancing service quality with development productivity."
+    ],
+    "experienceTitle": "Experience",
+    "stackTitle": "Tech Stack",
+    "highlightsTitle": "Core Strengths",
+    "highlights": [
+      "Numerous React·Next.js builds and renewals",
+      "Web accessibility (WA) project experience",
+      "SEO improvement projects",
+      "Jenkins CI/CD operations · Docker dev environments",
+      "AI-assisted development with Claude Code"
+    ],
+    "educationTitle": "Education",
+    "education": ["Software Engineering (school TBD)", "Computer Engineering (credit-bank program)"],
+    "certTitle": "Certificates · Etc.",
+    "certs": ["Computer Proficiency Level 2", "Information Equipment Operation Technician", "Class 2 Driver's License"]
+  },
+  "projects": {
+    "title": "Projects",
+    "lead": "Organized around problem-solving and outcomes.",
+    "featuredTitle": "Selected Projects",
+    "moreTitle": "More Work",
+    "roleLabel": "Role",
+    "visit": "Visit site"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "I welcome new projects and collaboration.",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "locationLabel": "Location",
+    "location": "Mapo-gu, Seoul",
+    "note": "This portfolio is organized around each project's problem-solving process and outcomes."
+  },
   "common": {
-    "home": "home"
+    "home": "home",
+    "backHome": "Back home",
+    "current": "Present",
+    "notFound": "Page not found",
+    "goHome": "Back to home"
   }
 }

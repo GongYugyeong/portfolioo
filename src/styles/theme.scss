@@ -1,0 +1,64 @@
+// 전역 디자인 토큰 — 모든 페이지/모듈에서 var()로 사용. (root layout에서 import)
+
+:root {
+  // Colors
+  --bg: #f5f1ea;
+  --bg-soft: #efeae0;
+  --fg: #0a0a0a;
+  --accent: #ff4d2e; // 대형 디스플레이·장식용
+  --accent-ink: #c73211; // 소형 텍스트용 (AA 4.5:1)
+  --muted: #6a655c; // 보조 텍스트 (AA 충족)
+  --line: rgba(10, 10, 10, 0.12);
+
+  // Type scale
+  --fs-display: clamp(3rem, 9vw, 8.5rem);
+  --fs-h1: clamp(2.4rem, 6vw, 4.5rem);
+  --fs-h2: clamp(1.8rem, 4vw, 3rem);
+  --fs-h3: clamp(1.2rem, 2vw, 1.5rem);
+  --fs-body: clamp(1rem, 1.1vw, 1.125rem);
+  --fs-mono: 0.8rem;
+
+  // Spacing / layout
+  --pad-x: clamp(1.25rem, 5vw, 5rem);
+  --section-y: clamp(4.5rem, 10vw, 9rem);
+  --maxw: 1280px;
+
+  // Motion
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --dur: 0.6s;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  // 한글은 어절(단어) 단위로 줄바꿈, 긴 URL 등만 강제 분리
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+// 제목은 줄 길이를 균형 있게(마지막 줄 한 단어 방지), 본문은 고아 단어 방지
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+#content {
+  min-height: 60vh;
+  padding-top: 64px; // fixed header 높이
+}
+
+// 스크롤 인 애니메이션 초기 상태 — JS가 켜졌을 때만 숨긴다(no-JS/크롤러는 콘텐츠 노출).
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,38 +1,41 @@
-import { ReactNode } from 'react';
-import { I18nProvider } from '@/components/I18nProvider';
+import type { ReactNode } from 'react';
+import type { Metadata } from 'next';
 
-import { Metadata } from 'next';
+import {
+  getDictionary,
+  isLocale,
+  locales,
+  defaultLocale,
+  type Locale,
+} from '@/lib/dictionary';
+import { site } from '@/data/site';
+import SiteHeader from '@/components/layout/SiteHeader';
+import SiteFooter from '@/components/layout/SiteFooter';
+import CustomCursor from '@/components/common/CustomCursor';
+import ScrollReveal from '@/components/anim/ScrollReveal';
+import SetLang from '@/components/SetLang';
 
 export function generateStaticParams() {
-  return [{ locale: 'ko' }, { locale: 'en' }];
+  return locales.map((locale) => ({ locale }));
 }
 
-// SEO 통합
-export async function generateMetadata(
-  { params }: { params: Promise<{ locale: string }> }
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
-  const isKorean = locale === 'ko';
-
-  const title = isKorean
-    ? '포트폴리오 | 프론트엔드 공유경'
-    : 'Portfolio | Frontend Developer Gong Yugyeong';
-
-  const description = isKorean
-    ? '안녕하세요. 프론트엔드 개발자 공유경입니다. 애니메이션과 인터랙션을 통해 생동감 있는 웹 경험을 만듭니다.'
-    : 'Hi, I’m Gong Yugyeong — a frontend developer who builds delightful web experiences with animation and interaction.';
-
-  const localeCode = isKorean ? 'ko_KR' : 'en_US';
-
+  const dict = getDictionary(locale);
   return {
-    title,
-    description,
+    metadataBase: new URL(site.baseUrl),
+    title: { default: dict.meta.home.title, template: `%s · ${dict.Name}` },
+    description: dict.meta.home.description,
     openGraph: {
-      title,
-      description,
-      locale: localeCode,
+      siteName: dict.SiteName,
+      locale: locale === 'en' ? 'en_US' : 'ko_KR',
       type: 'website',
     },
+    icons: { icon: '/favicon.ico' },
   };
 }
 
@@ -44,13 +47,29 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const loc: Locale = isLocale(locale) ? locale : defaultLocale;
+  const dict = getDictionary(loc);
+
+  const nav = [
+    { href: `/${loc}`, label: dict.nav.home },
+    { href: `/${loc}/about`, label: dict.nav.about },
+    { href: `/${loc}/projects`, label: dict.nav.projects },
+    { href: `/${loc}/contact`, label: dict.nav.contact },
+  ];
+
   return (
-    <html lang={locale}>
-      <body>
-        <I18nProvider locale={locale}>
-          {children}
-        </I18nProvider>
-      </body>
-    </html>
+    <>
+      <SetLang locale={loc} />
+      <CustomCursor />
+      <ScrollReveal />
+      <SiteHeader
+        locale={loc}
+        brand="Gong Yugyeong"
+        nav={nav}
+        switchLabel={dict.nav.switchLang}
+      />
+      <main id="content">{children}</main>
+      <SiteFooter locale={loc} dict={dict} />
+    </>
   );
 }

@@ -1,46 +1,96 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
-import MainComponent from '@/components/home/MainComponent';
+import { getDictionary, isLocale, defaultLocale, type Locale } from '@/lib/dictionary';
+import { pageMetadata } from '@/lib/metadata';
+import { featuredProjects } from '@/data/projects';
+import Hero from '@/components/sections/Hero';
+import ProjectCard from '@/components/sections/ProjectCard';
+import MagneticButton from '@/components/common/MagneticButton';
+import s from '@/styles/sections/home.module.scss';
 
-import styles from '@/styles/common/Components.module.scss';
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = getDictionary(locale);
+  return pageMetadata({
+    locale,
+    path: '',
+    title: dict.meta.home.title,
+    description: dict.meta.home.description,
+  });
+}
 
-// ================================
-// 메타데이터 (SEO)
-// ================================
-export const metadata: Metadata = {
-  title: '홈 | 프론트엔드 공유경',
-  description: '안녕하세요. 프론트엔드 개발자 공유경입니다.',
-  openGraph: {
-    title: '홈 | 프론트엔드 공유경',
-    description: '프론트엔드 개발자 공유경의 포트폴리오 메인 페이지입니다.',
-    type: 'website',
-    url: 'https://portfolio-gongyugyeong.kr',
-    siteName: '공유경 포트폴리오',
-    images: [
-      {
-        url: '/images/og-thumbnail.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Gong Yugyeong Portfolio Main',
-      },
-    ],
-  },
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
-};
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const loc: Locale = isLocale(locale) ? locale : defaultLocale;
+  const dict = getDictionary(loc);
+  const featured = featuredProjects.slice(0, 3);
 
-// ================================
-// 홈 페이지
-// ================================
-export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        {/* headerRef를 MainComponent로 전달 */}
-        <MainComponent />
-      </main>
-    </div>
+    <>
+      <Hero locale={loc} dict={dict} />
+
+      {/* About preview */}
+      <section className={s.section}>
+        <div className={s.wrap}>
+          <span className={s.kicker}>(01) — {dict.home.aboutTitle}</span>
+          <p className={s.lead} data-reveal>
+            {dict.home.aboutLead}
+          </p>
+          <Link className={s.textLink} href={`/${loc}/about`} data-cursor="hover" data-reveal>
+            {dict.home.aboutMore} <span aria-hidden>→</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Featured projects */}
+      <section className={s.section}>
+        <div className={s.wrap}>
+          <div className={s.head}>
+            <span className={s.kicker}>(02) — {dict.home.projectsTitle}</span>
+            <p className={s.subtitle} data-reveal>
+              {dict.home.projectsLead}
+            </p>
+          </div>
+          <div className={s.grid}>
+            {featured.map((p, i) => (
+              <ProjectCard
+                key={p.slug}
+                project={p}
+                locale={loc}
+                visitLabel={dict.projects.visit}
+                index={i}
+              />
+            ))}
+          </div>
+          <Link className={s.textLink} href={`/${loc}/projects`} data-cursor="hover" data-reveal>
+            {dict.home.projectsMore} <span aria-hidden>→</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className={s.ctaSection}>
+        <div className={s.wrap}>
+          <span className={s.kicker}>(03) — {dict.home.contactTitle}</span>
+          <h2 className={s.ctaTitle} data-reveal>
+            {dict.home.contactLead}
+          </h2>
+          <div data-reveal>
+            <MagneticButton href={`/${loc}/contact`} variant="solid">
+              {dict.home.contactCta}
+            </MagneticButton>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
