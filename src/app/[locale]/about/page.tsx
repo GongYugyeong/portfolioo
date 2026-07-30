@@ -4,6 +4,8 @@ import { getDictionary, isLocale, defaultLocale, type Locale } from '@/lib/dicti
 import { pageMetadata } from '@/lib/metadata';
 import { experiences } from '@/data/experience';
 import { stackGroups } from '@/data/stack';
+import { strengths } from '@/data/strengths';
+import { facts, focusTags } from '@/data/profile';
 import s from '@/styles/sections/about.module.scss';
 
 export async function generateMetadata({
@@ -46,6 +48,25 @@ export default async function AboutPage({
               </p>
             ))}
           </div>
+
+          <h2 className={s.srOnly}>{dict.about.focusTitle}</h2>
+          <ul className={`${s.chips} ${s.focusChips}`} data-reveal>
+            {focusTags.map((tag) => (
+              <li key={tag.en} className={s.chip}>
+                {tag[loc]}
+              </li>
+            ))}
+          </ul>
+
+          <h2 className={s.srOnly}>{dict.about.profileTitle}</h2>
+          <dl className={s.facts} data-reveal>
+            {facts.map((fact) => (
+              <div key={fact.id} className={s.fact}>
+                <dt>{fact.label[loc]}</dt>
+                <dd>{fact.value[loc]}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
@@ -53,13 +74,14 @@ export default async function AboutPage({
       <section className={s.section}>
         <div className={s.wrap}>
           <span className={s.kicker}>(02) — {dict.about.highlightsTitle}</span>
-          <ul className={s.dashList}>
-            {dict.about.highlights.map((item, i) => (
-              <li key={i} data-reveal>
-                {item}
-              </li>
+          <dl className={s.strengths}>
+            {strengths.map((item) => (
+              <div key={item.id} className={s.strength} data-reveal>
+                <dt>{item.label[loc]}</dt>
+                <dd>{item.body[loc]}</dd>
+              </div>
             ))}
-          </ul>
+          </dl>
         </div>
       </section>
 
@@ -73,7 +95,10 @@ export default async function AboutPage({
                 <div className={s.expHead}>
                   <h3 className={s.company}>{exp.company[loc]}</h3>
                   {exp.current && <span className={s.badge}>{dict.common.current}</span>}
-                  <span className={s.period}>{exp.period}</span>
+                  <span className={s.period}>
+                    {exp.period}
+                    {exp.duration && ` · ${exp.duration[loc]}`}
+                  </span>
                 </div>
                 <p className={s.role}>{exp.role[loc]}</p>
                 <ul className={s.dashList}>
@@ -108,17 +133,25 @@ export default async function AboutPage({
         </div>
       </section>
 
-      {/* 학력 · 자격 */}
+      {/* 학력 · 교육 · 자격 */}
       <section className={s.section}>
         <div className={s.wrap}>
           <span className={s.kicker}>
             (05) — {dict.about.educationTitle} · {dict.about.certTitle}
           </span>
-          <div className={s.twoCol}>
+          <div className={s.threeCol}>
             <div data-reveal>
               <h3 className={s.colTitle}>{dict.about.educationTitle}</h3>
               <ul className={s.dashList}>
                 {dict.about.education.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div data-reveal>
+              <h3 className={s.colTitle}>{dict.about.trainingTitle}</h3>
+              <ul className={s.dashList}>
+                {dict.about.training.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>

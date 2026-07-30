@@ -7,40 +7,46 @@
     "home": "홈",
     "about": "소개",
     "projects": "프로젝트",
+    "resume": "이력서",
     "contact": "연락처",
     "switchLang": "EN"
   },
   "meta": {
     "home": {
       "title": "공유경 · 프론트엔드 개발자",
-      "description": "퍼블리셔에서 시작해 React·Next.js 기반 서비스를 만드는 프론트엔드 개발자 공유경의 포트폴리오. 웹 접근성·SEO·AI 기반 개발."
+      "description": "대기업·공공기관 웹 프로젝트 40여 건을 수행한 9년차 프론트엔드 개발자 공유경의 포트폴리오. 레거시 전환, 웹 접근성(WA), SEO, 다국어, 키오스크."
     },
     "about": {
       "title": "소개",
-      "description": "5년+ 경력의 프론트엔드 개발자 공유경 — 경력, 기술 스택, 핵심 역량 소개."
+      "description": "9년차 프론트엔드 개발자 공유경 — 경력, 핵심 역량, 기술 스택, 학력."
     },
     "projects": {
       "title": "프로젝트",
-      "description": "Next.js 리뉴얼, 배리어프리 관광 키오스크, 관리자 시스템 등 공유경이 참여한 대표 프로젝트."
+      "description": "배리어프리 관광 키오스크, 대웅제약·대웅바이오 리뉴얼, Figma 플러그인 등 공유경이 참여한 대표 프로젝트."
+    },
+    "resume": {
+      "title": "이력서",
+      "description": "프론트엔드 개발자 공유경의 이력서 — 브라우저에서 바로 보거나 PDF로 내려받을 수 있습니다."
     },
     "contact": {
       "title": "연락처",
-      "description": "프론트엔드 개발자 공유경에게 연락하기 — 이메일·GitHub."
+      "description": "프론트엔드 개발자 공유경에게 연락하기 — 이메일·GitHub·이력서."
     }
   },
   "hero": {
     "eyebrow": "Portfolio / 2026",
-    "role": "Publisher · Frontend Developer",
-    "tagline": "퍼블리셔의 시선으로 마크업의 품질을 챙기고, 프론트엔드 엔지니어로 사용자 경험을 설계합니다.",
+    "role": "Frontend Developer · 경력 9년차 · 팀 리드",
+    "tagline": "퍼블리셔로 시작해 프론트엔드 개발로 확장했고, 지금은 개발팀 팀장으로 구축 · 리뉴얼 프로젝트를 총괄합니다.",
     "cta": "프로젝트 보기",
     "ctaContact": "연락하기",
+    "ctaResume": "이력서 보기",
     "scroll": "Scroll",
     "status": "새로운 기회에 열려 있어요",
     "location": "서울, KR"
   },
   "home": {
     "aboutTitle": "소개",
-    "aboutLead": "프론트엔드 개발은 화면을 구현하는 일이 아니라 사용자와 서비스를 연결하는 일이라고 생각합니다.",
+    "aboutLead": "대기업 · 공공기관 웹 프로젝트 40여 건을 수행하며, 레거시 전환과 웹 접근성 · SEO처럼 요구 조건이 명확한 일을 주로 맡아왔습니다.",
     "aboutMore": "더 알아보기",
     "projectsTitle": "대표 프로젝트",
     "projectsLead": "문제 해결 과정과 성과 중심으로 골랐습니다.",
@@ -51,34 +57,47 @@
   },
   "about": {
     "title": "소개",
-    "lead": "퍼블리셔에서 프론트엔드 개발자로.",
+    "lead": "퍼블리셔에서 시작해, 지금은 구축 · 리뉴얼을 총괄합니다.",
     "intro": [
-      "프론트엔드 개발자는 단순히 화면을 구현하는 사람이 아니라, 사용자와 서비스를 연결하는 역할이라고 생각합니다.",
-      "퍼블리셔로 커리어를 시작해 지금은 React·Next.js 기반 프론트엔드 개발자로 다양한 구축·리뉴얼 프로젝트를 수행하고 있습니다.",
-      "최근에는 웹 접근성(WA), SEO, 성능 최적화, Docker·Jenkins 기반 개발/배포 환경, Claude Code와 AI Agent를 활용한 개발 워크플로까지 적극적으로 다루며 서비스 품질과 개발 생산성을 함께 고민합니다."
+      "대한항공 · 삼성디스플레이 · SK하이닉스 · LG · GS건설 · 현대해상 · 한화 · 대웅제약 등 대기업 · 공공기관 웹 프로젝트 40여 건을 수행한 9년차 프론트엔드 개발자입니다.",
+      "퍼블리셔로 시작해 프론트엔드 개발로 확장했고, 현재는 개발팀 팀장으로 구축 · 리뉴얼 프로젝트를 총괄합니다. 프로젝트 성격에 따라 퍼블리싱과 개발 어느 쪽으로도 투입 가능합니다.",
+      "레거시 PHP · jQuery 서비스의 Next.js / TypeScript 전면 전환을 정보 구조 설계부터 이관까지 리드했습니다.",
+      "웹 접근성(WA) · SEO · 다국어 · 키오스크처럼 요구 조건이 명확한 프로젝트를 주로 맡았고, 에이전시 환경에서 짧은 주기로 낯선 도메인에 투입되는 일에 익숙합니다."
     ],
+    "focusTitle": "주력 분야",
+    "profileTitle": "프로필",
     "experienceTitle": "경력",
     "stackTitle": "기술 스택",
     "highlightsTitle": "핵심 역량",
-    "highlights": [
-      "React·Next.js 기반 구축 및 리뉴얼 프로젝트 다수 수행",
-      "웹 접근성(WA) 프로젝트 경험",
-      "SEO 개선 프로젝트 수행",
-      "Jenkins 기반 CI/CD 운영 · Docker 개발환경 구축",
-      "Claude Code를 활용한 AI 기반 개발"
-    ],
     "educationTitle": "학력",
-    "education": ["서일대학교 소프트웨어공학", "학점은행제 컴퓨터공학"],
-    "certTitle": "자격 · 기타",
-    "certs": ["컴퓨터활용능력 2급", "정보기기운용기능사", "2종 보통 운전면허"]
+    "education": [
+      "학점은행제 컴퓨터공학과 (편입) 졸업 · 2025.02",
+      "서일전문대학 인터넷정보과 졸업 · 2016.02"
+    ],
+    "trainingTitle": "교육",
+    "training": ["React.js (TypeScript · Router · Redux) · 한국소프트웨어아이엔씨 · 2020"],
+    "certTitle": "자격",
+    "certs": ["정보기기운용기능사", "컴퓨터활용능력 2급", "2종 보통 운전면허"]
   },
   "projects": {
     "title": "프로젝트",
     "lead": "문제 해결 과정과 성과 중심으로 정리했습니다.",
-    "featuredTitle": "대표 프로젝트",
-    "moreTitle": "그 외 작업",
+    "featuredTitle": "주요 프로젝트",
+    "moreTitle": "그 외 프로젝트",
     "roleLabel": "역할",
+    "clientLabel": "고객사",
     "visit": "사이트 방문"
+  },
+  "resume": {
+    "title": "이력서",
+    "lead": "브라우저에서 바로 보거나, PDF로 내려받을 수 있습니다.",
+    "updated": "2026.07 기준",
+    "viewerLabel": "공유경 이력서 PDF",
+    "openPdf": "새 창에서 열기",
+    "download": "PDF 다운로드",
+    "openNotion": "Notion으로 보기",
+    "fallback": "이 브라우저에서는 PDF 미리보기가 열리지 않습니다. 아래 버튼으로 새 창에서 열거나 내려받아 주세요.",
+    "mobileNote": "모바일에서는 미리보기가 제대로 보이지 않을 수 있습니다. 새 창에서 열거나 내려받아서 봐주세요."
   },
   "contact": {
     "title": "연락처",
@@ -86,8 +105,9 @@
     "emailLabel": "이메일",
     "githubLabel": "GitHub",
     "resumeLabel": "이력서",
+    "resumePdfLabel": "이력서 (PDF)",
     "locationLabel": "지역",
-    "location": "서울특별시 마포구",
+    "location": "서울특별시 마포구 서교동",
     "note": "포트폴리오는 프로젝트별 문제 해결 과정과 성과 중심으로 구성했습니다."
   },
   "common": {

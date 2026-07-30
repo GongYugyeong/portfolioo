@@ -14,15 +14,31 @@ export default function ProjectCard({
   visitLabel: string;
   index?: number;
 }) {
+  const meta = [project.client?.[locale], project.role[locale]].filter(Boolean).join(' · ');
+
   return (
     <article className={s.card} data-reveal>
       <div className={s.head}>
         {typeof index === 'number' && (
-          <span className={s.num}>{String(index + 1).padStart(2, '0')}</span>
+          <span className={s.num}>{`${String(index + 1).padStart(2, '0')}.`}</span>
         )}
-        <h3 className={s.title}>{project.title[locale]}</h3>
-        {project.year && <span className={s.year}>{project.year}</span>}
+        <div className={s.titleRow}>
+          <h3 className={s.title}>{project.title[locale]}</h3>
+          {(project.period ?? project.year) && (
+            <span className={s.year}>{project.period ?? project.year}</span>
+          )}
+        </div>
       </div>
+
+      {project.badges && project.badges.length > 0 && (
+        <ul className={s.badges}>
+          {project.badges.map((badge) => (
+            <li key={badge.en}>{badge[locale]}</li>
+          ))}
+        </ul>
+      )}
+
+      {meta && <p className={s.meta}>{meta}</p>}
 
       <p className={s.summary}>{project.summary[locale]}</p>
 

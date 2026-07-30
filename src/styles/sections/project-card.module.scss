@@ -14,16 +14,27 @@
   }
 }
 
+// 번호는 한 줄 위에, 제목 · 기간은 그 아래 한 줄에
 .head {
   display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 .num {
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: var(--fs-mono);
+  letter-spacing: 0.06em;
   color: var(--accent-ink);
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  width: 100%;
 }
 
 .title {
@@ -35,9 +46,38 @@
 }
 
 .year {
+  flex: 0 0 auto;
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: var(--fs-mono);
   color: var(--muted);
+  white-space: nowrap;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin-top: -0.4rem;
+
+  li {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    border: 1px solid var(--accent-ink);
+    border-radius: 999px;
+    padding: 0.25em 0.7em;
+  }
+}
+
+.meta {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--fs-mono);
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: -0.5rem;
 }
 
 .summary {

@@ -7,40 +7,46 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
+    "resume": "Resume",
     "contact": "Contact",
     "switchLang": "KR"
   },
   "meta": {
     "home": {
       "title": "Gong Yugyeong · Frontend Developer",
-      "description": "Portfolio of Gong Yugyeong — a frontend developer who started as a publisher and builds React·Next.js services with a focus on accessibility, SEO, and AI-assisted development."
+      "description": "Portfolio of Gong Yugyeong — a frontend developer with 9 years and 40+ web projects for enterprise and public-sector clients. Legacy migration, accessibility (WA), SEO, i18n, kiosks."
     },
     "about": {
       "title": "About",
-      "description": "Gong Yugyeong, a frontend developer with 5+ years — career, tech stack, and core strengths."
+      "description": "Gong Yugyeong, a frontend developer with 9 years — career, core strengths, tech stack, and education."
     },
     "projects": {
       "title": "Projects",
-      "description": "Selected projects by Gong Yugyeong — Next.js renewals, a barrier-free tourism kiosk, admin systems, and more."
+      "description": "Selected projects by Gong Yugyeong — a barrier-free tourism kiosk, Daewoong Pharmaceutical and Daewoong Bio renewals, a Figma plugin, and more."
+    },
+    "resume": {
+      "title": "Resume",
+      "description": "Resume of frontend developer Gong Yugyeong — read it in the browser or download the PDF."
     },
     "contact": {
       "title": "Contact",
-      "description": "Get in touch with frontend developer Gong Yugyeong — email and GitHub."
+      "description": "Get in touch with frontend developer Gong Yugyeong — email, GitHub, and resume."
     }
   },
   "hero": {
     "eyebrow": "Portfolio / 2026",
-    "role": "Publisher · Frontend Developer",
-    "tagline": "I keep markup quality sharp with a publisher's eye, and design user experiences as a frontend engineer.",
+    "role": "Frontend Developer · 9 years · Team Lead",
+    "tagline": "I started as a publisher, grew into frontend development, and now lead a dev team owning builds and renewals end to end.",
     "cta": "View Projects",
     "ctaContact": "Get in touch",
+    "ctaResume": "View resume",
     "scroll": "Scroll",
     "status": "Open to new opportunities",
     "location": "Seoul, KR"
   },
   "home": {
     "aboutTitle": "About",
-    "aboutLead": "I see frontend work not as building screens, but as connecting users with services.",
+    "aboutLead": "Across 40+ web projects for enterprise and public-sector clients, my work has centered on legacy migration and on projects with hard requirements — accessibility and SEO.",
     "aboutMore": "Learn more",
     "projectsTitle": "Selected Projects",
     "projectsLead": "Chosen for their problem-solving and outcomes.",
@@ -51,34 +57,51 @@
   },
   "about": {
     "title": "About",
-    "lead": "From publisher to frontend developer.",
+    "lead": "From publisher to leading builds and renewals.",
     "intro": [
-      "A frontend developer isn't just someone who builds screens — I see the role as connecting users with services.",
-      "I started my career as a publisher and now work as a React·Next.js frontend developer across many builds and renewals.",
-      "Lately I actively work with web accessibility (WA), SEO, performance, Docker·Jenkins pipelines, and AI-assisted workflows using Claude Code and AI agents — balancing service quality with development productivity."
+      "A frontend developer with 9 years and 40+ web projects for enterprise and public-sector clients, including Korean Air, Samsung Display, SK hynix, LG, GS E&C, Hyundai Marine, Hanwha, and Daewoong Pharmaceutical.",
+      "I started as a publisher and grew into frontend development; today I lead a dev team owning builds and renewals. Depending on what a project needs, I can step into either the publishing or the development side.",
+      "I led the full migration of legacy PHP · jQuery services to Next.js / TypeScript — from information architecture through to cutover.",
+      "My work has centered on projects with explicit requirements — accessibility (WA), SEO, multilingual, kiosks — and agency work has made me comfortable ramping into unfamiliar domains on short cycles."
     ],
+    "focusTitle": "Focus areas",
+    "profileTitle": "Profile",
     "experienceTitle": "Experience",
     "stackTitle": "Tech Stack",
     "highlightsTitle": "Core Strengths",
-    "highlights": [
-      "Numerous React·Next.js builds and renewals",
-      "Web accessibility (WA) project experience",
-      "SEO improvement projects",
-      "Jenkins CI/CD operations · Docker dev environments",
-      "AI-assisted development with Claude Code"
-    ],
     "educationTitle": "Education",
-    "education": ["Seoil University, Software Engineering", "Computer Engineering (credit-bank program)"],
-    "certTitle": "Certificates · Etc.",
-    "certs": ["Computer Proficiency Level 2", "Information Equipment Operation Technician", "Class 2 Driver's License"]
+    "education": [
+      "B.S. Computer Engineering, Academic Credit Bank System (transfer) · Feb 2025",
+      "Seoil University, Internet Information · Feb 2016"
+    ],
+    "trainingTitle": "Training",
+    "training": ["React.js (TypeScript · Router · Redux) · Korea Software Inc. · 2020"],
+    "certTitle": "Certificates",
+    "certs": [
+      "Information Equipment Operation Technician",
+      "Computer Proficiency Level 2",
+      "Class 2 Driver's License"
+    ]
   },
   "projects": {
     "title": "Projects",
     "lead": "Organized around problem-solving and outcomes.",
-    "featuredTitle": "Selected Projects",
-    "moreTitle": "More Work",
+    "featuredTitle": "Selected Work",
+    "moreTitle": "Archive",
     "roleLabel": "Role",
+    "clientLabel": "Client",
     "visit": "Visit site"
+  },
+  "resume": {
+    "title": "Resume",
+    "lead": "Read it right here, or download the PDF.",
+    "updated": "As of July 2026",
+    "viewerLabel": "Gong Yugyeong resume PDF",
+    "openPdf": "Open in new tab",
+    "download": "Download PDF",
+    "openNotion": "View on Notion",
+    "fallback": "This browser can't preview the PDF inline. Use the buttons below to open it in a new tab or download it.",
+    "mobileNote": "Inline preview is unreliable on mobile. Open the PDF in a new tab or download it instead."
   },
   "contact": {
     "title": "Contact",
@@ -86,8 +109,9 @@
     "emailLabel": "Email",
     "githubLabel": "GitHub",
     "resumeLabel": "Resume",
+    "resumePdfLabel": "Resume (PDF)",
     "locationLabel": "Location",
-    "location": "Mapo-gu, Seoul",
+    "location": "Seogyo-dong, Mapo-gu, Seoul",
     "note": "This portfolio is organized around each project's problem-solving process and outcomes."
   },
   "common": {
