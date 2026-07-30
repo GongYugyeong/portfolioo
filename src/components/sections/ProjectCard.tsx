@@ -18,27 +18,28 @@ export default function ProjectCard({
 
   return (
     <article className={s.card} data-reveal>
+      {/* 번호 / 제목 / 기간·배지 / 고객사·역할 — 카드마다 같은 순서로 쌓는다 */}
       <div className={s.head}>
         {typeof index === 'number' && (
           <span className={s.num}>{`${String(index + 1).padStart(2, '0')}.`}</span>
         )}
-        <div className={s.titleRow}>
-          <h3 className={s.title}>{project.title[locale]}</h3>
+        <h3 className={s.title}>{project.title[locale]}</h3>
+
+        <div className={s.subHead}>
           {(project.period ?? project.year) && (
             <span className={s.year}>{project.period ?? project.year}</span>
           )}
+          {project.badges && project.badges.length > 0 && (
+            <ul className={s.badges}>
+              {project.badges.map((badge) => (
+                <li key={badge.en}>{badge[locale]}</li>
+              ))}
+            </ul>
+          )}
         </div>
+
+        {meta && <p className={s.meta}>{meta}</p>}
       </div>
-
-      {project.badges && project.badges.length > 0 && (
-        <ul className={s.badges}>
-          {project.badges.map((badge) => (
-            <li key={badge.en}>{badge[locale]}</li>
-          ))}
-        </ul>
-      )}
-
-      {meta && <p className={s.meta}>{meta}</p>}
 
       <p className={s.summary}>{project.summary[locale]}</p>
 

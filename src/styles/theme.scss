@@ -22,6 +22,7 @@
   --pad-x: clamp(1.25rem, 5vw, 5rem);
   --section-y: clamp(4.5rem, 10vw, 9rem);
   --maxw: 1280px;
+  --header-h: 64px;
 
   // Motion
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
@@ -46,9 +47,16 @@ p {
   text-wrap: pretty;
 }
 
+// 모바일은 GNB가 2줄(브랜드+언어 / 메뉴)로 접히면서 헤더가 높아진다
+@media (max-width: 640px) {
+  :root {
+    --header-h: 96px;
+  }
+}
+
 #content {
   min-height: 60vh;
-  padding-top: 64px; // fixed header 높이
+  padding-top: var(--header-h);
 }
 
 // 스크롤 인 애니메이션 초기 상태 — JS가 켜졌을 때만 숨긴다(no-JS/크롤러는 콘텐츠 노출).

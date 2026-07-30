@@ -12,7 +12,7 @@
 .inner {
   max-width: var(--maxw);
   margin: 0 auto;
-  height: 64px;
+  min-height: var(--header-h);
   padding: 0 var(--pad-x);
   display: flex;
   align-items: center;
@@ -72,11 +72,45 @@
   }
 }
 
-@media (max-width: 560px) {
-  .nav ul {
-    gap: 1rem;
+// 메뉴 5개 + 브랜드 + 언어를 한 줄에 넣으면 좁은 화면에서 잘려서 2줄로 나눈다
+@media (max-width: 640px) {
+  .inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'brand lang'
+      'nav nav';
+    align-items: center;
+    gap: 0.5rem 1rem;
+    padding-block: 0.6rem;
   }
+
   .brand {
+    grid-area: brand;
     font-size: 1.2rem;
+  }
+
+  .lang {
+    grid-area: lang;
+    justify-self: end;
+  }
+
+  .nav {
+    grid-area: nav;
+    min-width: 0;
+  }
+
+  .nav ul {
+    justify-content: space-between;
+    gap: 0.35rem 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    // 텍스트 높이만으로는 탭 영역이 24px에 못 미쳐서 패딩으로 넓힌다
+    display: inline-block;
+    padding: 0.45rem 0.25rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
   }
 }
