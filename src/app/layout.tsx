@@ -11,6 +11,8 @@ import '@/styles/theme.scss';
 export const metadata: Metadata = {
   metadataBase: new URL(site.baseUrl),
   title: 'Gong Yugyeong · Frontend Portfolio',
+  // Search Console 소유확인 — 루트에 둬야 / 와 /[locale] 전부에 붙는다(하위에서 verification을 덮지 않음)
+  verification: { google: 'GlZfrfXOUlv2GCUqc3fKLQnKdN1KcHUpLbvAaKmyyxU' },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
