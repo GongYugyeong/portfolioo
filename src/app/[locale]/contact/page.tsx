@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 import { getDictionary, isLocale, defaultLocale, type Locale } from '@/lib/dictionary';
 import { pageMetadata } from '@/lib/metadata';
+import { asset } from '@/lib/asset';
 import { site } from '@/data/site';
 import MagneticButton from '@/components/common/MagneticButton';
 import s from '@/styles/sections/contact.module.scss';
@@ -76,6 +78,22 @@ export default async function ContactPage({
               >
                 Notion ↗
               </a>
+            </div>
+            <div className={s.row} data-reveal>
+              <span className={s.label}>{dict.contact.resumePdfLabel}</span>
+              <span className={s.valueGroup}>
+                <Link className={`${s.value} ${s.valueLink}`} href={`/${loc}/resume`} data-cursor="hover">
+                  {dict.resume.title}
+                </Link>
+                <a
+                  className={s.subLink}
+                  href={asset(site.resumePdf)}
+                  download={site.resumePdfName}
+                  data-cursor="hover"
+                >
+                  {dict.resume.download} ↓
+                </a>
+              </span>
             </div>
             <div className={s.row} data-reveal>
               <span className={s.label}>{dict.contact.locationLabel}</span>

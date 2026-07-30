@@ -1,0 +1,155 @@
+.section {
+  padding: clamp(6rem, 14vw, 9rem) 0 var(--section-y);
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
+.kicker {
+  display: inline-block;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--fs-mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  margin-bottom: 1.5rem;
+}
+
+.headline {
+  font-family: var(--font-display), serif;
+  font-size: var(--fs-h1);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 34em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 2rem;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.75em 1.4em;
+  border: 1px solid var(--fg);
+  border-radius: 999px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--fs-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-out-expo), background 0.3s var(--ease-out-expo);
+
+  &:hover {
+    background: var(--fg);
+    color: var(--bg);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+.updated {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--fs-mono);
+  color: var(--muted);
+}
+
+.viewer {
+  margin-top: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg-soft);
+  overflow: hidden;
+}
+
+.object {
+  display: block;
+  width: 100%;
+  // 2장짜리 A4를 스크롤 없이 훑을 수 있는 정도
+  height: min(160vh, 1400px);
+  border: 0;
+}
+
+.fallback,
+.mobileNote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: clamp(2rem, 6vw, 3.5rem);
+
+  p {
+    font-size: var(--fs-body);
+    line-height: 1.7;
+    color: var(--fg);
+    max-width: 28em;
+  }
+}
+
+.mobileNote {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .object {
+    display: none;
+  }
+  .mobileNote {
+    display: flex;
+  }
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
+  }
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+
+  dt {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: var(--fs-mono);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  dd {
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    color: var(--fg);
+  }
+}

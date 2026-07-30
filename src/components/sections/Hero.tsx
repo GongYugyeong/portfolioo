@@ -36,6 +36,9 @@ export default function Hero({
           <MagneticButton href={`/${locale}/projects`} variant="solid">
             {dict.hero.cta}
           </MagneticButton>
+          <MagneticButton href={`/${locale}/resume`}>
+            {dict.hero.ctaResume}
+          </MagneticButton>
           <MagneticButton href={`/${locale}/contact`}>
             {dict.hero.ctaContact}
           </MagneticButton>

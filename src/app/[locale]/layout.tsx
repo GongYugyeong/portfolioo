@@ -54,6 +54,7 @@ export default async function LocaleLayout({
     { href: `/${loc}`, label: dict.nav.home },
     { href: `/${loc}/about`, label: dict.nav.about },
     { href: `/${loc}/projects`, label: dict.nav.projects },
+    { href: `/${loc}/resume`, label: dict.nav.resume },
     { href: `/${loc}/contact`, label: dict.nav.contact },
   ];
 

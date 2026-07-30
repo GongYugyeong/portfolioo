@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Dictionary, Locale } from '@/lib/dictionary';
+import { asset } from '@/lib/asset';
 import { site } from '@/data/site';
 import s from '@/styles/layout/site-footer.module.scss';
 
@@ -19,6 +20,7 @@ export default function SiteFooter({
             <Link href={`/${locale}`}>{dict.nav.home}</Link>
             <Link href={`/${locale}/about`}>{dict.nav.about}</Link>
             <Link href={`/${locale}/projects`}>{dict.nav.projects}</Link>
+            <Link href={`/${locale}/resume`}>{dict.nav.resume}</Link>
             <Link href={`/${locale}/contact`}>{dict.nav.contact}</Link>
           </nav>
         </div>
@@ -28,8 +30,8 @@ export default function SiteFooter({
           <a href={site.github} target="_blank" rel="noreferrer">
             GitHub
           </a>
-          <a href={site.resume} target="_blank" rel="noreferrer">
-            {dict.contact.resumeLabel}
+          <a href={asset(site.resumePdf)} download={site.resumePdfName}>
+            {dict.contact.resumePdfLabel}
           </a>
           <span>{dict.contact.location}</span>
           <span className={s.copy}>© 2026 Gong Yugyeong</span>

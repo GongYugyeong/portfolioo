@@ -5,7 +5,7 @@ import { site } from '@/data/site';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/about', '/projects', '/contact'];
+  const routes = ['', '/about', '/projects', '/resume', '/contact'];
   const entries: MetadataRoute.Sitemap = [];
 
   for (const locale of locales) {
