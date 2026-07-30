@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 
 import { getDictionary, isLocale, defaultLocale, type Locale } from '@/lib/dictionary';
 import { pageMetadata } from '@/lib/metadata';
+import { pageGraph } from '@/lib/jsonLd';
+import JsonLd from '@/components/seo/JsonLd';
 import { experiences } from '@/data/experience';
 import { stackGroups } from '@/data/stack';
 import { strengths } from '@/data/strengths';
@@ -20,6 +22,7 @@ export async function generateMetadata({
     path: '/about',
     title: dict.meta.about.title,
     description: dict.meta.about.description,
+    siteName: dict.Name,
   });
 }
 
@@ -34,6 +37,16 @@ export default async function AboutPage({
 
   return (
     <>
+      <JsonLd
+        data={pageGraph({
+          locale: loc,
+          dict,
+          path: '/about',
+          title: dict.meta.about.title,
+          description: dict.meta.about.description,
+        })}
+      />
+
       {/* 인트로 */}
       <section className={s.introSection}>
         <div className={s.wrap}>

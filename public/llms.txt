@@ -1,0 +1,67 @@
+# 공유경 (Gong Yugyeong) — Frontend Developer
+
+> 대기업·공공기관 웹 프로젝트 40여 건을 수행한 9년차 프론트엔드 개발자. 퍼블리셔로 시작해 프론트엔드 개발로 확장했고, 현재 (주)피터패트 개발팀 팀장으로 구축·리뉴얼 프로젝트를 총괄한다. 레거시 PHP·jQuery를 Next.js/TypeScript로 전환하는 작업과 웹 접근성(WA)·SEO·다국어·키오스크처럼 요구 조건이 명확한 프로젝트를 주로 맡는다.
+
+> A frontend developer with 9 years and 40+ web projects for enterprise and public-sector clients in Korea. Started as a publisher, now leads a dev team at PITAPAT owning builds and renewals. Specializes in migrating legacy PHP/jQuery to Next.js/TypeScript, and in projects with explicit requirements — web accessibility (WA), SEO, i18n, and kiosks.
+
+- 이름 / Name: 공유경 (Gong Yugyeong)
+- 직무 / Role: 프론트엔드 개발자, 개발팀 팀장 (Frontend Developer, Dev Team Lead)
+- 경력 / Experience: 9년차 (since 2014, 실무 전향 2018)
+- 위치 / Location: 서울특별시 마포구 (Mapo-gu, Seoul, KR)
+- 이메일 / Email: yugyeong0917@naver.com
+- GitHub: https://github.com/GongYugyeong
+
+## 페이지 / Pages
+
+- [홈 / Home (KO)](https://gongyugyeong.github.io/portfolioo/ko/): 소개 요약과 대표 프로젝트 3건
+- [홈 / Home (EN)](https://gongyugyeong.github.io/portfolioo/en/)
+- [소개 / About (KO)](https://gongyugyeong.github.io/portfolioo/ko/about/): 경력 4건, 핵심 역량 5개, 기술 스택, 학력·교육·자격
+- [소개 / About (EN)](https://gongyugyeong.github.io/portfolioo/en/about/)
+- [프로젝트 / Projects (KO)](https://gongyugyeong.github.io/portfolioo/ko/projects/): 주요 프로젝트 6건 + 연도별 아카이브
+- [프로젝트 / Projects (EN)](https://gongyugyeong.github.io/portfolioo/en/projects/)
+- [이력서 / Resume (KO)](https://gongyugyeong.github.io/portfolioo/ko/resume/): PDF 미리보기 및 다운로드
+- [이력서 PDF / Resume PDF](https://gongyugyeong.github.io/portfolioo/resume/gong-yugyeong-resume.pdf): 전체 이력서 원문
+- [연락처 / Contact (KO)](https://gongyugyeong.github.io/portfolioo/ko/contact/)
+
+## 핵심 역량 / Core strengths
+
+- **레거시 전환 (Legacy migration)**: PHP·jQuery 서비스를 Next.js/TypeScript로 전면 리뉴얼. 정보 구조 설계 · 단계적 이관 · 백엔드 협업 주도.
+- **웹 접근성 WA (Web accessibility)**: ARIA 속성, 키보드 내비게이션, 포커스 관리, 고대비 모드, 스크린리더 검증까지 구현 레벨에서 직접 대응.
+- **SEO 구조 설계**: Metadata API 동적 메타데이터, Open Graph, Canonical URL, Sitemap/Robots, 검색 친화적 URL 구조.
+- **퍼블리싱 + 개발**: 퍼블리셔 출신으로 마크업 품질과 크로스 브라우징 기준 보유. 다국어·반응형 대응 경험 다수.
+- **팀 리딩 (Team leadership)**: 코드 리뷰 문화 정착, 공통 컴포넌트 표준화, Jenkins CI/CD·Docker 환경 구축, AI 개발도구 사내 도입.
+
+## 기술 스택 / Tech stack
+
+- Frontend: Next.js (App Router), React, TypeScript, JavaScript ES6+, HTML5, CSS3·SCSS
+- State / API: Zustand, Redux Toolkit, REST API, Axios, Swagger
+- UI / Viz: GSAP, Swiper, Lenis, Chart.js, i18n
+- DevOps / AI: Git·GitLab·Gitea, Jenkins, Docker, Node.js, Claude Code·MCP
+- 협업 / Collaboration: Figma, Zeplin, Adobe XD, Notion, ClickUp
+
+## 경력 / Career
+
+- **2024.10 – 현재**: (주)피터패트 개발팀 팀장(과장). 프론트엔드 팀 리드, 레거시 PHP의 Next.js 전면 리뉴얼 리드, 사내 React 개발 표준 수립, Jenkins CI/CD·Docker 환경 구축, Claude Code 사내 최초 도입.
+- **2024.05 – 2024.10**: (주)메디씨앤씨·(주)씨스텀 개발팀 대리. 메디게이트·메디캐스트(국내 최대 의사 커뮤니티) 구축, React·Redux Toolkit·TypeScript 레거시 리팩토링.
+- **2018.08 – 2023.12**: (주)피터패트 Frontend Developer / 퍼블리셔. 대기업·공공기관 브랜드 사이트 및 뉴스룸 30여 건, 하이브리드 앱, 관광 키오스크.
+- **2014.08 – 2017.12**: (주)에이젠인터넷 경영지원팀. 웹 퍼블리싱 병행하며 실무 전향.
+
+## 주요 프로젝트 / Selected work
+
+- **스마트관광안내시스템 배리어프리 키오스크 리뉴얼** (2026.06–12, 진행 중): 노후 PHP 키오스크를 Next.js로 전면 재구축. 웹 접근성 기준 충족이 계약 조건 — ARIA·키보드 내비게이션·포커스 관리·스크린리더 검증. 4개 국어(국/영/중 간체·번체/일) i18n 구조 설계.
+- **Wreeting — Figma 문구 검수 플러그인** (2026.06–, 자사 프로덕트): UI 스레드(React)와 메인 스레드(figma.*)를 postMessage로 잇는 2스레드 아키텍처 설계. 규칙 기반 텍스트 교정 + AI 대체 문구 생성.
+- **대웅제약 웹사이트 리뉴얼** (2025.08–2026.04): 소비자·의료 전문가·투자자가 공존하는 대규모 코퍼레이트 사이트를 Next.js App Router로 전면 리뉴얼. SEO 최적화, Swagger 기반 REST API 연동, Java(Spring) 백엔드 협업. https://www.daewoong.co.kr/ko
+- **대웅바이오 웹사이트 리뉴얼** (2025.05–12): 글로벌 제약사·바이어 대상 CMO/CDMO B2B 사이트. 실적 지표를 스크롤 트리거 카운트업으로 시각화. https://daewoongbio.co.kr/ko
+- **디앤오 Khub 사내 웹시스템** (2024.10–, 상주): 임직원 일일 사용 업무 시스템. 구축 후 2년 가까이 단독 유지운영.
+- **대한항공 항공우주사업본부 웹사이트** (2023.01–02): GSAP ScrollTrigger 연혁 타임라인, transform/opacity 기반 처리로 리플로우 최소화. https://aerospace.koreanair.com/main
+
+## 학력·자격 / Education & certificates
+
+- 학점은행제 컴퓨터공학과(편입) 졸업 · 2025.02
+- 서일전문대학 인터넷정보과 졸업 · 2016.02
+- React.js (TypeScript·Router·Redux) · 한국소프트웨어아이엔씨 · 2020
+- 정보기기운용기능사, 컴퓨터활용능력 2급
+
+## 이 사이트 / About this site
+
+Next.js 16 App Router + React 19 + TypeScript로 만든 정적 사이트(`output: 'export'`). GitHub Pages 호스팅. 콘텐츠는 서버에서 렌더해 정적 HTML로 떨어지므로 JS 없이도 본문을 읽을 수 있다. 소스: https://github.com/GongYugyeong/portfolioo

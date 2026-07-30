@@ -9,6 +9,8 @@ import {
   type Locale,
 } from '@/lib/dictionary';
 import { site } from '@/data/site';
+import { siteGraph } from '@/lib/jsonLd';
+import JsonLd from '@/components/seo/JsonLd';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import CustomCursor from '@/components/common/CustomCursor';
@@ -35,7 +37,7 @@ export async function generateMetadata({
       locale: locale === 'en' ? 'en_US' : 'ko_KR',
       type: 'website',
     },
-    icons: { icon: '/favicon.ico' },
+    // icons는 app/favicon.ico 파일 컨벤션이 basePath까지 붙여 처리한다 — 직접 지정하면 basePath가 빠진다
   };
 }
 
@@ -60,6 +62,7 @@ export default async function LocaleLayout({
 
   return (
     <>
+      <JsonLd data={siteGraph(loc, dict)} />
       <SetLang locale={loc} />
       <CustomCursor />
       <ScrollReveal />

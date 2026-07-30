@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 
 import { getDictionary, isLocale, defaultLocale, type Locale } from '@/lib/dictionary';
 import { pageMetadata } from '@/lib/metadata';
+import { pageGraph } from '@/lib/jsonLd';
+import JsonLd from '@/components/seo/JsonLd';
 import { asset } from '@/lib/asset';
 import { site } from '@/data/site';
 import { facts } from '@/data/profile';
@@ -19,6 +21,7 @@ export async function generateMetadata({
     path: '/resume',
     title: dict.meta.resume.title,
     description: dict.meta.resume.description,
+    siteName: dict.Name,
   });
 }
 
@@ -34,6 +37,15 @@ export default async function ResumePage({
 
   return (
     <section className={s.section}>
+      <JsonLd
+        data={pageGraph({
+          locale: loc,
+          dict,
+          path: '/resume',
+          title: dict.meta.resume.title,
+          description: dict.meta.resume.description,
+        })}
+      />
       <div className={s.wrap}>
         <span className={s.kicker}>(01) — {dict.resume.title}</span>
         <h1 className={s.headline} data-reveal>

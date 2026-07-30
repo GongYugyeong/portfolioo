@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 
 import { getDictionary, isLocale, defaultLocale, type Locale } from '@/lib/dictionary';
 import { pageMetadata } from '@/lib/metadata';
+import { pageGraph, projectListGraph } from '@/lib/jsonLd';
+import JsonLd from '@/components/seo/JsonLd';
 import { featuredProjects, moreProjects } from '@/data/projects';
 import ProjectCard from '@/components/sections/ProjectCard';
 import s from '@/styles/sections/projects.module.scss';
@@ -18,6 +20,7 @@ export async function generateMetadata({
     path: '/projects',
     title: dict.meta.projects.title,
     description: dict.meta.projects.description,
+    siteName: dict.Name,
   });
 }
 
@@ -32,6 +35,17 @@ export default async function ProjectsPage({
 
   return (
     <>
+      <JsonLd
+        data={pageGraph({
+          locale: loc,
+          dict,
+          path: '/projects',
+          title: dict.meta.projects.title,
+          description: dict.meta.projects.description,
+        })}
+      />
+      <JsonLd data={projectListGraph(loc)} />
+
       <section className={s.headerSection}>
         <div className={s.wrap}>
           <span className={s.kicker}>(01) — {dict.projects.featuredTitle}</span>

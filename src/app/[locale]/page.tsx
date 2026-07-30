@@ -21,6 +21,7 @@ export async function generateMetadata({
     path: '',
     title: dict.meta.home.title,
     description: dict.meta.home.description,
+    siteName: dict.Name,
   });
 }
 

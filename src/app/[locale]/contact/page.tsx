@@ -3,6 +3,8 @@ import Link from 'next/link';
 
 import { getDictionary, isLocale, defaultLocale, type Locale } from '@/lib/dictionary';
 import { pageMetadata } from '@/lib/metadata';
+import { pageGraph } from '@/lib/jsonLd';
+import JsonLd from '@/components/seo/JsonLd';
 import { asset } from '@/lib/asset';
 import { site } from '@/data/site';
 import MagneticButton from '@/components/common/MagneticButton';
@@ -20,6 +22,7 @@ export async function generateMetadata({
     path: '/contact',
     title: dict.meta.contact.title,
     description: dict.meta.contact.description,
+    siteName: dict.Name,
   });
 }
 
@@ -34,6 +37,16 @@ export default async function ContactPage({
 
   return (
     <>
+      <JsonLd
+        data={pageGraph({
+          locale: loc,
+          dict,
+          path: '/contact',
+          title: dict.meta.contact.title,
+          description: dict.meta.contact.description,
+        })}
+      />
+
       <section className={s.section}>
         <div className={s.wrap}>
           <span className={s.kicker}>(01) — {dict.contact.title}</span>
